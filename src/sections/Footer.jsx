@@ -6,6 +6,7 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 export default function Footer() {
   const quickLinks = ['Home', 'About Us', 'Our Services', 'Doctors', 'Appointment', 'Health Packages', 'Contact Us'];
   const quickServices = ['General Medicine', 'Cardiology', 'Neurology', 'Orthopedics', 'Pediatrics', 'Gynecology', 'Diagnostics'];
+  const patientinfo = ['General Medicine', 'Cardiology', 'Neurology', 'Orthopedics', 'Pediatrics', 'Gynecology', 'Diagnostics'];
 
   return (
     <footer className="bg-white border-t border-gray-100 pt-20 overflow-hidden">
@@ -93,6 +94,15 @@ export default function Footer() {
           {/* Column 4: Client Patient Info Space Anchor */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-sm font-bold text-gray-900 tracking-tight">Patient Info</h4>
+            <ul className="space-y-2.5">
+              {patientinfo.map((service) => (
+                <li key={service}>
+                  <a href="#services" className="text-xs text-gray-400 hover:text-[#004D4D] transition-colors duration-200 font-light block">
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
         </div>
@@ -101,7 +111,7 @@ export default function Footer() {
       {/* Absolute Base Copyright Signature Horizontal Deck Ribbon */}
       <div className="bg-[#004D4D] py-4 text-center border-t border-[#003333]">
         <p className="text-[11px] font-medium tracking-wide text-white/80">
-          © 2026 Aditi Srivastava. All Rights Reserved.
+          © 2026 Health Sync. All Rights Reserved.
         </p>
       </div>
     </footer>

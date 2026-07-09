@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, LogIn } from 'lucide-react';
 import { FcGoogle } from 'react-icons/fc';
+import { FaHeartbeat, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 export default function LoginView({ setView }) {
   return (

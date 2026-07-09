@@ -5,6 +5,7 @@ import { X } from 'lucide-react'; // Switched to lucide-react for consistency
 import LoginView from './LoginView';
 import SignUpView from './SignUpView';
 import ForgotView from './ForgotView';
+import { FaHeadphones, FaCalendarCheck, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 export default function AuthModal({ isOpen, onClose, initialView = 'login' }) {
   const [view, setView] = React.useState(initialView);
@@ -61,14 +62,14 @@ export default function AuthModal({ isOpen, onClose, initialView = 'login' }) {
         <div className="bg-[#004D4D] text-white py-4 px-6 md:px-12 flex-wrap items-center justify-between gap-4 text-[11px] font-light border-t border-[#003333] hidden sm:flex">
           <div className="flex items-center gap-6">
             <span>✓ Trusted & Secure</span>
-            <span>🎧 24/7 Support</span>
-            <span>📅 Easy Appointments</span>
+            <span className='flex gap-2'><FaHeadphones className='mt-[2px]'/> 24/7 Support</span>
+            <span className='flex gap-2'><FaCalendarCheck className='mt-[2px]'/> Easy Appointments</span>
           </div>
           <div className="flex items-center gap-3 opacity-80">
             <span>Follow Us:</span>
-            <a href="#" className="hover:underline">FB</a>
-            <a href="#" className="hover:underline">IG</a>
-            <a href="#" className="hover:underline">TW</a>
+            <a href="#" className="hover:underline"><FaFacebookF /></a>
+            <a href="#" className="hover:underline"><FaInstagram /></a>
+            <a href="#" className="hover:underline"><FaTwitter /></a>
           </div>
         </div>
       </div>
